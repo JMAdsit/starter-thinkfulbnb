@@ -56,6 +56,7 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  margin: 0 20px;
 }
 
 .logo {
@@ -66,6 +67,7 @@ header {
 
 header nav ul li {
   list-style-type: none;
+  margin: 20px;
 }
 
 header nav ul li a {
@@ -79,10 +81,30 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+#menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 60px;
+  font-weight: bold;
+}
+
+#stay h2 {
+  font-size: 45px;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display:flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+form div {
+  display:flex;
+  justify-content: space-between;
+  margin: 0 40px;
 }
 
 form label {
@@ -104,6 +126,70 @@ form button {
   width: 100%;
 }
 
+/* -------  About ------- */
+
+#about {
+  display: flex;
+  flex-direction: column;
+}
+
+#about img {
+  width:auto;
+  margin: 20px;
+}
+
+#about p {
+  font-size: 20px;
+}
+
+/* -------  Ideas ------- */
+
+#ideas {
+  display: flex;
+  flex-direction: column;
+}
+
+#ideas h2 {
+  font-size: 35px;
+}
+
+#ideas h3 {
+  margin: 0 40px;
+  font-size: 25px;
+}
+
+#ideas div img {
+  width: 30em;
+  margin: 40px;
+}
+
+/* -------  Host ------- */
+
+#host {
+  display: flex;
+  flex-direction: column;
+}
+
+#host h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#host p {
+  font-size: 25px;
+}
+
+#host ul {
+  font-size: 23px;
+}
+
+#host img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 40px;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -114,6 +200,72 @@ footer p {
   color: #fff;
   text-align: center;
   padding: 20px;
+  font-size: 25px;
 }
 
+
+
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    width: 200px;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  #about img {
+    width:20em;
+    margin: 20px;
+  }
+
+  #about h2 {
+    width: 100%;
+  }
+
+  #about p {
+    width: 40em;
+    align-content: center;
+  }
+
+  #ideas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #ideas h2 {
+    width: 80em;
+  }
+
+  #ideas div {
+    width: 50em;
+  }
+
+  #host {
+    flex-direction: row;
+    align-content: center;
+  }
+  #host img {
+    width: 50em;
+  }
+}
