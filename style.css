@@ -67,7 +67,7 @@ header {
 
 header nav ul li {
   list-style-type: none;
-  margin: 20px;
+  flex: 1 1 10%;
 }
 
 header nav ul li a {
@@ -98,6 +98,7 @@ form {
   padding: 10px;
   display:flex;
   flex-direction: column;
+  flex: 1 1 10%;
   font-size: 20px;
 }
 
@@ -158,9 +159,10 @@ form button {
   font-size: 25px;
 }
 
-#ideas div img {
-  width: 30em;
-  margin: 40px;
+#ideas img {
+  width: auto;
+  max-width: 95%;
+  margin: 20px;
 }
 
 /* -------  Host ------- */
@@ -207,16 +209,19 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   form {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1 1 10%;
   }
 
   form div {
@@ -234,7 +239,8 @@ footer p {
   }
   
   #about img {
-    width:20em;
+    flex: 1 1;
+    width: 20%;
     margin: 20px;
   }
 
@@ -243,7 +249,7 @@ footer p {
   }
 
   #about p {
-    width: 40em;
+    flex: 2 1;
     align-content: center;
   }
 
@@ -257,8 +263,9 @@ footer p {
     width: 80em;
   }
 
+
   #ideas div {
-    width: 50em;
+    width: 45%;
   }
 
   #host {
@@ -266,6 +273,10 @@ footer p {
     align-content: center;
   }
   #host img {
-    width: 50em;
+    flex: 1 1 10%;
+    max-width: 30%;
+  }
+  #host p {
+    flex: 1 1 10%;
   }
 }
